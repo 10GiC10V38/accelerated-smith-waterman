@@ -1,0 +1,1387 @@
+===============================================
+ Building final_optimised.c  →  sw_hybrid
+===============================================
+
+
+========== Running PERf for smith-waterman ==========
+
+===============================================
+N = 1000    Threads = 1
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=1000
+Optimized Score: 450
+Optimized Time:  0.0496s
+Throughput:      0.02 GCUPS
+
+ Performance counter stats for './sw_hybrid 1000':
+
+      63,03,49,558      cycles                                                                  (65.42%)
+       3,60,58,771      instructions                     #    0.06  insn per cycle              (82.11%)
+         89,33,480      branches                                                                (82.84%)
+            33,305      branch-misses                    #    0.37% of all branches             (83.86%)
+          4,32,107      cache-references                                                        (83.97%)
+            79,962      cache-misses                     #   18.51% of all cache refs           (83.92%)
+
+       0.051307579 seconds time elapsed
+
+       0.333976000 seconds user
+       0.002999000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=1000
+Optimized Score: 450
+Optimized Time:  0.0011s
+Throughput:      0.94 GCUPS
+
+ Performance counter stats for './sw_hybrid 1000':
+
+          9,19,340      L1-dcache-loads                                                       
+            46,304      L1-dcache-load-misses            #    5.04% of all L1-dcache accesses 
+
+       0.002707978 seconds time elapsed
+
+       0.007614000 seconds user
+       0.001903000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=1000
+Optimized Score: 450
+Optimized Time:  0.0016s
+Throughput:      0.61 GCUPS
+
+ Performance counter stats for './sw_hybrid 1000':
+
+            16,209      LLC-loads                                                             
+             2,216      LLC-load-misses                  #   13.67% of all LL-cache accesses  
+          2,42,068      cache-references                                                      
+            35,187      cache-misses                     #   14.54% of all cache refs         
+
+       0.003227184 seconds time elapsed
+
+       0.011080000 seconds user
+       0.001704000 seconds sys
+
+
+
+
+
+===============================================
+N = 1000    Threads = 2
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=1000
+Optimized Score: 450
+Optimized Time:  0.0011s
+Throughput:      0.90 GCUPS
+
+ Performance counter stats for './sw_hybrid 1000':
+
+       1,54,39,095      cycles                                                                  (7.84%)
+         57,52,913      instructions                     #    0.37  insn per cycle              (63.64%)
+          7,12,924      branches                                                              
+            16,841      branch-misses                    #    2.36% of all branches           
+          2,31,732      cache-references                                                      
+            25,035      cache-misses                     #   10.80% of all cache refs           (92.16%)
+
+       0.002774066 seconds time elapsed
+
+       0.007389000 seconds user
+       0.001847000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=1000
+Optimized Score: 450
+Optimized Time:  0.0021s
+Throughput:      0.48 GCUPS
+
+ Performance counter stats for './sw_hybrid 1000':
+
+          9,29,340      L1-dcache-loads                                                       
+            47,414      L1-dcache-load-misses            #    5.10% of all L1-dcache accesses 
+
+       0.005227070 seconds time elapsed
+
+       0.008848000 seconds user
+       0.009733000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=1000
+Optimized Score: 450
+Optimized Time:  0.0023s
+Throughput:      0.43 GCUPS
+
+ Performance counter stats for './sw_hybrid 1000':
+
+            16,024      LLC-loads                                                             
+             2,152      LLC-load-misses                  #   13.43% of all LL-cache accesses  
+          2,43,315      cache-references                                                      
+            35,100      cache-misses                     #   14.43% of all cache refs         
+
+       0.005639219 seconds time elapsed
+
+       0.017384000 seconds user
+       0.002045000 seconds sys
+
+
+
+
+
+===============================================
+N = 1000    Threads = 4
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=1000
+Optimized Score: 450
+Optimized Time:  0.0025s
+Throughput:      0.40 GCUPS
+
+ Performance counter stats for './sw_hybrid 1000':
+
+       1,60,27,313      cycles                                                                  (83.46%)
+         52,96,522      instructions                     #    0.33  insn per cycle              (88.85%)
+          8,64,840      branches                                                                (68.81%)
+            25,135      branch-misses                    #    2.91% of all branches             (60.91%)
+          2,56,795      cache-references                                                        (87.75%)
+            36,961      cache-misses                     #   14.39% of all cache refs           (99.07%)
+
+       0.005838174 seconds time elapsed
+
+       0.017288000 seconds user
+       0.003050000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=1000
+Optimized Score: 450
+Optimized Time:  0.0022s
+Throughput:      0.45 GCUPS
+
+ Performance counter stats for './sw_hybrid 1000':
+
+          9,16,872      L1-dcache-loads                                                       
+            46,478      L1-dcache-load-misses            #    5.07% of all L1-dcache accesses 
+
+       0.005562946 seconds time elapsed
+
+       0.013622000 seconds user
+       0.005676000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=1000
+Optimized Score: 450
+Optimized Time:  0.0023s
+Throughput:      0.43 GCUPS
+
+ Performance counter stats for './sw_hybrid 1000':
+
+            17,217      LLC-loads                                                             
+             2,449      LLC-load-misses                  #   14.22% of all LL-cache accesses  
+          2,41,083      cache-references                                                      
+            35,129      cache-misses                     #   14.57% of all cache refs         
+
+       0.005716151 seconds time elapsed
+
+       0.013645000 seconds user
+       0.005685000 seconds sys
+
+
+
+
+
+===============================================
+N = 1000    Threads = 8
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=1000
+Optimized Score: 450
+Optimized Time:  0.0024s
+Throughput:      0.42 GCUPS
+
+ Performance counter stats for './sw_hybrid 1000':
+
+       1,56,75,369      cycles                                                                  (84.13%)
+         53,61,020      instructions                     #    0.34  insn per cycle              (89.69%)
+          9,25,280      branches                                                                (60.13%)
+            23,686      branch-misses                    #    2.56% of all branches             (60.02%)
+          2,35,794      cache-references                                                        (98.44%)
+            30,383      cache-misses                     #   12.89% of all cache refs           (97.29%)
+
+       0.005828195 seconds time elapsed
+
+       0.013927000 seconds user
+       0.005803000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=1000
+Optimized Score: 450
+Optimized Time:  0.0023s
+Throughput:      0.44 GCUPS
+
+ Performance counter stats for './sw_hybrid 1000':
+
+          9,28,407      L1-dcache-loads                                                       
+            48,181      L1-dcache-load-misses            #    5.19% of all L1-dcache accesses 
+
+       0.005645483 seconds time elapsed
+
+       0.016412000 seconds user
+       0.002896000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=1000
+Optimized Score: 450
+Optimized Time:  0.0023s
+Throughput:      0.44 GCUPS
+
+ Performance counter stats for './sw_hybrid 1000':
+
+            16,363      LLC-loads                                                             
+             2,190      LLC-load-misses                  #   13.38% of all LL-cache accesses  
+          2,46,373      cache-references                                                      
+            35,791      cache-misses                     #   14.53% of all cache refs         
+
+       0.005612148 seconds time elapsed
+
+       0.011977000 seconds user
+       0.007186000 seconds sys
+
+
+
+
+
+===============================================
+N = 5000    Threads = 1
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=5000
+Optimized Score: 2215
+Optimized Time:  0.0141s
+Throughput:      1.77 GCUPS
+
+ Performance counter stats for './sw_hybrid 5000':
+
+       9,85,89,625      cycles                                                                  (69.16%)
+       6,76,38,364      instructions                     #    0.69  insn per cycle              (84.23%)
+         51,83,380      branches                                                                (79.64%)
+            30,286      branch-misses                    #    0.58% of all branches             (80.39%)
+          4,37,401      cache-references                                                        (85.73%)
+            31,749      cache-misses                     #    7.26% of all cache refs           (85.08%)
+
+       0.018421033 seconds time elapsed
+
+       0.109588000 seconds user
+       0.005026000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=5000
+Optimized Score: 2215
+Optimized Time:  0.0133s
+Throughput:      1.88 GCUPS
+
+ Performance counter stats for './sw_hybrid 5000':
+
+         79,68,119      L1-dcache-loads                                                       
+            89,587      L1-dcache-load-misses            #    1.12% of all L1-dcache accesses 
+
+       0.017032027 seconds time elapsed
+
+       0.104307000 seconds user
+       0.003067000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=5000
+Optimized Score: 2215
+Optimized Time:  0.0134s
+Throughput:      1.87 GCUPS
+
+ Performance counter stats for './sw_hybrid 5000':
+
+            27,271      LLC-loads                                                             
+             2,426      LLC-load-misses                  #    8.90% of all LL-cache accesses  
+          3,70,870      cache-references                                                      
+            39,346      cache-misses                     #   10.61% of all cache refs         
+
+       0.017255018 seconds time elapsed
+
+       0.102378000 seconds user
+       0.005963000 seconds sys
+
+
+
+
+
+===============================================
+N = 5000    Threads = 2
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=5000
+Optimized Score: 2215
+Optimized Time:  0.0139s
+Throughput:      1.80 GCUPS
+
+ Performance counter stats for './sw_hybrid 5000':
+
+       9,61,63,719      cycles                                                                  (69.26%)
+       6,65,90,774      instructions                     #    0.69  insn per cycle              (84.72%)
+         49,77,237      branches                                                                (81.86%)
+            29,867      branch-misses                    #    0.60% of all branches             (78.68%)
+          4,22,673      cache-references                                                        (85.16%)
+            39,407      cache-misses                     #    9.32% of all cache refs           (85.05%)
+
+       0.017791834 seconds time elapsed
+
+       0.102753000 seconds user
+       0.008978000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=5000
+Optimized Score: 2215
+Optimized Time:  0.0133s
+Throughput:      1.88 GCUPS
+
+ Performance counter stats for './sw_hybrid 5000':
+
+         79,72,243      L1-dcache-loads                                                       
+            90,934      L1-dcache-load-misses            #    1.14% of all L1-dcache accesses 
+
+       0.017187394 seconds time elapsed
+
+       0.102468000 seconds user
+       0.005175000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=5000
+Optimized Score: 2215
+Optimized Time:  0.0135s
+Throughput:      1.85 GCUPS
+
+ Performance counter stats for './sw_hybrid 5000':
+
+            25,751      LLC-loads                                                             
+             2,263      LLC-load-misses                  #    8.79% of all LL-cache accesses  
+          3,70,171      cache-references                                                      
+            38,558      cache-misses                     #   10.42% of all cache refs         
+
+       0.017409780 seconds time elapsed
+
+       0.103206000 seconds user
+       0.005954000 seconds sys
+
+
+
+
+
+===============================================
+N = 5000    Threads = 4
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=5000
+Optimized Score: 2215
+Optimized Time:  0.0139s
+Throughput:      1.80 GCUPS
+
+ Performance counter stats for './sw_hybrid 5000':
+
+       9,58,66,265      cycles                                                                  (68.20%)
+       6,73,23,666      instructions                     #    0.70  insn per cycle              (83.72%)
+         50,03,902      branches                                                                (80.98%)
+            27,995      branch-misses                    #    0.56% of all branches             (80.62%)
+          4,42,127      cache-references                                                        (85.29%)
+            38,187      cache-misses                     #    8.64% of all cache refs           (84.91%)
+
+       0.017853302 seconds time elapsed
+
+       0.105352000 seconds user
+       0.006078000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=5000
+Optimized Score: 2215
+Optimized Time:  0.0133s
+Throughput:      1.88 GCUPS
+
+ Performance counter stats for './sw_hybrid 5000':
+
+         79,72,522      L1-dcache-loads                                                       
+            88,595      L1-dcache-load-misses            #    1.11% of all L1-dcache accesses 
+
+       0.017071613 seconds time elapsed
+
+       0.103386000 seconds user
+       0.004054000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=5000
+Optimized Score: 2215
+Optimized Time:  0.0134s
+Throughput:      1.86 GCUPS
+
+ Performance counter stats for './sw_hybrid 5000':
+
+            26,816      LLC-loads                                                             
+             2,881      LLC-load-misses                  #   10.74% of all LL-cache accesses  
+          3,70,037      cache-references                                                      
+            37,813      cache-misses                     #   10.22% of all cache refs         
+
+       0.017318877 seconds time elapsed
+
+       0.097355000 seconds user
+       0.011682000 seconds sys
+
+
+
+
+
+===============================================
+N = 5000    Threads = 8
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=5000
+Optimized Score: 2215
+Optimized Time:  0.0139s
+Throughput:      1.79 GCUPS
+
+ Performance counter stats for './sw_hybrid 5000':
+
+       9,65,88,693      cycles                                                                  (69.31%)
+       6,67,32,214      instructions                     #    0.69  insn per cycle              (84.67%)
+         49,38,031      branches                                                                (80.83%)
+            32,214      branch-misses                    #    0.65% of all branches             (80.44%)
+          4,70,464      cache-references                                                        (84.13%)
+            42,345      cache-misses                     #    9.00% of all cache refs           (85.29%)
+
+       0.018125758 seconds time elapsed
+
+       0.105362000 seconds user
+       0.006957000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=5000
+Optimized Score: 2215
+Optimized Time:  0.0134s
+Throughput:      1.86 GCUPS
+
+ Performance counter stats for './sw_hybrid 5000':
+
+         79,96,588      L1-dcache-loads                                                       
+            91,392      L1-dcache-load-misses            #    1.14% of all L1-dcache accesses 
+
+       0.017441339 seconds time elapsed
+
+       0.105788000 seconds user
+       0.003954000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=5000
+Optimized Score: 2215
+Optimized Time:  0.0135s
+Throughput:      1.85 GCUPS
+
+ Performance counter stats for './sw_hybrid 5000':
+
+            26,219      LLC-loads                                                             
+             2,070      LLC-load-misses                  #    7.90% of all LL-cache accesses  
+          3,66,797      cache-references                                                      
+            35,340      cache-misses                     #    9.63% of all cache refs         
+
+       0.017332355 seconds time elapsed
+
+       0.103689000 seconds user
+       0.005033000 seconds sys
+
+
+
+
+
+===============================================
+N = 10000    Threads = 1
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=10000
+Optimized Score: 4504
+Optimized Time:  0.0443s
+Throughput:      2.26 GCUPS
+
+ Performance counter stats for './sw_hybrid 10000':
+
+      31,25,49,432      cycles                                                                  (67.86%)
+      25,58,11,259      instructions                     #    0.82  insn per cycle              (83.91%)
+       1,68,60,675      branches                                                                (82.75%)
+            37,213      branch-misses                    #    0.22% of all branches             (82.14%)
+          7,72,945      cache-references                                                        (83.26%)
+            36,351      cache-misses                     #    4.70% of all cache refs           (83.99%)
+
+       0.048932988 seconds time elapsed
+
+       0.352925000 seconds user
+       0.003007000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=10000
+Optimized Score: 4504
+Optimized Time:  0.0441s
+Throughput:      2.27 GCUPS
+
+ Performance counter stats for './sw_hybrid 10000':
+
+       2,91,04,756      L1-dcache-loads                                                       
+          2,13,478      L1-dcache-load-misses            #    0.73% of all L1-dcache accesses 
+
+       0.048575016 seconds time elapsed
+
+       0.345960000 seconds user
+       0.006979000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=10000
+Optimized Score: 4504
+Optimized Time:  0.0426s
+Throughput:      2.35 GCUPS
+
+ Performance counter stats for './sw_hybrid 10000':
+
+            52,549      LLC-loads                                                             
+             2,804      LLC-load-misses                  #    5.34% of all LL-cache accesses  
+          7,09,089      cache-references                                                      
+            46,750      cache-misses                     #    6.59% of all cache refs         
+
+       0.046696739 seconds time elapsed
+
+       0.329891000 seconds user
+       0.005979000 seconds sys
+
+
+
+
+
+===============================================
+N = 10000    Threads = 2
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=10000
+Optimized Score: 4504
+Optimized Time:  0.0399s
+Throughput:      2.51 GCUPS
+
+ Performance counter stats for './sw_hybrid 10000':
+
+      31,15,38,649      cycles                                                                  (68.72%)
+      25,51,31,753      instructions                     #    0.82  insn per cycle              (84.66%)
+       1,68,03,265      branches                                                                (83.78%)
+            39,529      branch-misses                    #    0.24% of all branches             (82.49%)
+          7,69,670      cache-references                                                        (82.47%)
+            39,819      cache-misses                     #    5.17% of all cache refs           (82.55%)
+
+       0.044043101 seconds time elapsed
+
+       0.317299000 seconds user
+       0.002984000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=10000
+Optimized Score: 4504
+Optimized Time:  0.0387s
+Throughput:      2.58 GCUPS
+
+ Performance counter stats for './sw_hybrid 10000':
+
+       2,89,67,393      L1-dcache-loads                                                       
+          1,99,533      L1-dcache-load-misses            #    0.69% of all L1-dcache accesses 
+
+       0.042716408 seconds time elapsed
+
+       0.307136000 seconds user
+       0.004028000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=10000
+Optimized Score: 4504
+Optimized Time:  0.0400s
+Throughput:      2.50 GCUPS
+
+ Performance counter stats for './sw_hybrid 10000':
+
+            48,622      LLC-loads                                                             
+             2,236      LLC-load-misses                  #    4.60% of all LL-cache accesses  
+          6,64,017      cache-references                                                      
+            37,107      cache-misses                     #    5.59% of all cache refs         
+
+       0.043997803 seconds time elapsed
+
+       0.314907000 seconds user
+       0.005030000 seconds sys
+
+
+
+
+
+===============================================
+N = 10000    Threads = 4
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=10000
+Optimized Score: 4504
+Optimized Time:  0.0399s
+Throughput:      2.50 GCUPS
+
+ Performance counter stats for './sw_hybrid 10000':
+
+      31,24,39,119      cycles                                                                  (68.91%)
+      25,49,73,725      instructions                     #    0.82  insn per cycle              (84.75%)
+       1,68,63,377      branches                                                                (83.55%)
+            40,258      branch-misses                    #    0.24% of all branches             (82.49%)
+          7,59,490      cache-references                                                        (82.53%)
+            34,785      cache-misses                     #    4.58% of all cache refs           (82.51%)
+
+       0.044144508 seconds time elapsed
+
+       0.317267000 seconds user
+       0.003978000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=10000
+Optimized Score: 4504
+Optimized Time:  0.0389s
+Throughput:      2.57 GCUPS
+
+ Performance counter stats for './sw_hybrid 10000':
+
+       2,89,89,228      L1-dcache-loads                                                       
+          2,01,753      L1-dcache-load-misses            #    0.70% of all L1-dcache accesses 
+
+       0.042791435 seconds time elapsed
+
+       0.309178000 seconds user
+       0.003001000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=10000
+Optimized Score: 4504
+Optimized Time:  0.0393s
+Throughput:      2.54 GCUPS
+
+ Performance counter stats for './sw_hybrid 10000':
+
+            50,295      LLC-loads                                                             
+             2,773      LLC-load-misses                  #    5.51% of all LL-cache accesses  
+          6,74,956      cache-references                                                      
+            43,022      cache-misses                     #    6.37% of all cache refs         
+
+       0.043351937 seconds time elapsed
+
+       0.311034000 seconds user
+       0.003974000 seconds sys
+
+
+
+
+
+===============================================
+N = 10000    Threads = 8
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=10000
+Optimized Score: 4504
+Optimized Time:  0.0401s
+Throughput:      2.49 GCUPS
+
+ Performance counter stats for './sw_hybrid 10000':
+
+      31,33,61,201      cycles                                                                  (68.75%)
+      25,60,80,596      instructions                     #    0.82  insn per cycle              (84.71%)
+       1,68,71,729      branches                                                                (83.42%)
+            47,140      branch-misses                    #    0.28% of all branches             (82.54%)
+          7,77,538      cache-references                                                        (82.55%)
+            28,825      cache-misses                     #    3.71% of all cache refs           (82.74%)
+
+       0.044546536 seconds time elapsed
+
+       0.319136000 seconds user
+       0.003010000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=10000
+Optimized Score: 4504
+Optimized Time:  0.0390s
+Throughput:      2.57 GCUPS
+
+ Performance counter stats for './sw_hybrid 10000':
+
+       2,89,86,470      L1-dcache-loads                                                       
+          2,00,529      L1-dcache-load-misses            #    0.69% of all L1-dcache accesses 
+
+       0.043043870 seconds time elapsed
+
+       0.309249000 seconds user
+       0.004029000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=10000
+Optimized Score: 4504
+Optimized Time:  0.0397s
+Throughput:      2.52 GCUPS
+
+ Performance counter stats for './sw_hybrid 10000':
+
+            50,166      LLC-loads                                                             
+             2,502      LLC-load-misses                  #    4.99% of all LL-cache accesses  
+          6,69,877      cache-references                                                      
+            39,297      cache-misses                     #    5.87% of all cache refs         
+
+       0.043784145 seconds time elapsed
+
+       0.314166000 seconds user
+       0.002992000 seconds sys
+
+
+
+
+
+===============================================
+N = 50000    Threads = 1
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=50000
+Optimized Score: 22708
+Optimized Time:  0.4942s
+Throughput:      5.06 GCUPS
+
+ Performance counter stats for './sw_hybrid 50000':
+
+    6,62,38,43,777      cycles                                                                  (66.65%)
+    6,27,84,06,756      instructions                     #    0.95  insn per cycle              (83.30%)
+      38,40,36,955      branches                                                                (83.23%)
+          3,70,985      branch-misses                    #    0.10% of all branches             (83.37%)
+         99,95,468      cache-references                                                        (83.38%)
+          1,10,775      cache-misses                     #    1.11% of all cache refs           (83.37%)
+
+       0.502670088 seconds time elapsed
+
+       3.932654000 seconds user
+       0.005991000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=50000
+Optimized Score: 22708
+Optimized Time:  0.3602s
+Throughput:      6.94 GCUPS
+
+ Performance counter stats for './sw_hybrid 50000':
+
+      68,72,85,580      L1-dcache-loads                                                       
+         29,03,105      L1-dcache-load-misses            #    0.42% of all L1-dcache accesses 
+
+       0.364103368 seconds time elapsed
+
+       2.878634000 seconds user
+       0.000999000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=50000
+Optimized Score: 22708
+Optimized Time:  0.3630s
+Throughput:      6.89 GCUPS
+
+ Performance counter stats for './sw_hybrid 50000':
+
+          6,38,673      LLC-loads                                                             
+             6,664      LLC-load-misses                  #    1.04% of all LL-cache accesses  
+         86,61,663      cache-references                                                      
+            89,194      cache-misses                     #    1.03% of all cache refs         
+
+       0.366759206 seconds time elapsed
+
+       2.889703000 seconds user
+       0.002994000 seconds sys
+
+
+
+
+
+===============================================
+N = 50000    Threads = 2
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=50000
+Optimized Score: 22708
+Optimized Time:  0.3642s
+Throughput:      6.86 GCUPS
+
+ Performance counter stats for './sw_hybrid 50000':
+
+    6,61,76,10,895      cycles                                                                  (66.91%)
+    6,28,72,36,951      instructions                     #    0.95  insn per cycle              (83.52%)
+      38,21,17,376      branches                                                                (83.39%)
+          4,01,289      branch-misses                    #    0.11% of all branches             (83.24%)
+         97,62,643      cache-references                                                        (83.22%)
+            87,728      cache-misses                     #    0.90% of all cache refs           (83.25%)
+
+       0.368136808 seconds time elapsed
+
+       2.905615000 seconds user
+       0.003993000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=50000
+Optimized Score: 22708
+Optimized Time:  0.3606s
+Throughput:      6.93 GCUPS
+
+ Performance counter stats for './sw_hybrid 50000':
+
+      68,73,52,064      L1-dcache-loads                                                       
+         28,77,320      L1-dcache-load-misses            #    0.42% of all L1-dcache accesses 
+
+       0.364515430 seconds time elapsed
+
+       2.876351000 seconds user
+       0.004001000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=50000
+Optimized Score: 22708
+Optimized Time:  0.3586s
+Throughput:      6.97 GCUPS
+
+ Performance counter stats for './sw_hybrid 50000':
+
+          5,93,501      LLC-loads                                                             
+             5,186      LLC-load-misses                  #    0.87% of all LL-cache accesses  
+         82,58,392      cache-references                                                      
+            76,604      cache-misses                     #    0.93% of all cache refs         
+
+       0.362376859 seconds time elapsed
+
+       2.864836000 seconds user
+       0.002992000 seconds sys
+
+
+
+
+
+===============================================
+N = 50000    Threads = 4
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=50000
+Optimized Score: 22708
+Optimized Time:  0.3627s
+Throughput:      6.89 GCUPS
+
+ Performance counter stats for './sw_hybrid 50000':
+
+    6,59,48,16,520      cycles                                                                  (66.79%)
+    6,27,51,85,287      instructions                     #    0.95  insn per cycle              (83.42%)
+      38,19,26,306      branches                                                                (83.32%)
+          3,18,773      branch-misses                    #    0.08% of all branches             (83.19%)
+         93,57,161      cache-references                                                        (83.26%)
+            73,587      cache-misses                     #    0.79% of all cache refs           (83.44%)
+
+       0.366626380 seconds time elapsed
+
+       2.897493000 seconds user
+       0.001996000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=50000
+Optimized Score: 22708
+Optimized Time:  0.3613s
+Throughput:      6.92 GCUPS
+
+ Performance counter stats for './sw_hybrid 50000':
+
+      68,74,16,152      L1-dcache-loads                                                       
+         28,88,907      L1-dcache-load-misses            #    0.42% of all L1-dcache accesses 
+
+       0.365165882 seconds time elapsed
+
+       2.878621000 seconds user
+       0.004995000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=50000
+Optimized Score: 22708
+Optimized Time:  0.3587s
+Throughput:      6.97 GCUPS
+
+ Performance counter stats for './sw_hybrid 50000':
+
+          6,27,665      LLC-loads                                                             
+             4,924      LLC-load-misses                  #    0.78% of all LL-cache accesses  
+         85,34,294      cache-references                                                      
+            70,846      cache-misses                     #    0.83% of all cache refs         
+
+       0.362646916 seconds time elapsed
+
+       2.866134000 seconds user
+       0.001998000 seconds sys
+
+
+
+
+
+===============================================
+N = 50000    Threads = 8
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=50000
+Optimized Score: 22708
+Optimized Time:  0.3625s
+Throughput:      6.90 GCUPS
+
+ Performance counter stats for './sw_hybrid 50000':
+
+    6,59,19,25,038      cycles                                                                  (66.84%)
+    6,27,48,43,703      instructions                     #    0.95  insn per cycle              (83.42%)
+      38,16,57,716      branches                                                                (83.35%)
+          3,29,226      branch-misses                    #    0.09% of all branches             (83.17%)
+         93,46,835      cache-references                                                        (83.21%)
+            74,491      cache-misses                     #    0.80% of all cache refs           (83.43%)
+
+       0.366375736 seconds time elapsed
+
+       2.896218000 seconds user
+       0.001995000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=50000
+Optimized Score: 22708
+Optimized Time:  0.3607s
+Throughput:      6.93 GCUPS
+
+ Performance counter stats for './sw_hybrid 50000':
+
+      68,73,88,806      L1-dcache-loads                                                       
+         29,31,250      L1-dcache-load-misses            #    0.43% of all L1-dcache accesses 
+
+       0.364584033 seconds time elapsed
+
+       2.879093000 seconds user
+       0.001994000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=50000
+Optimized Score: 22708
+Optimized Time:  0.3612s
+Throughput:      6.92 GCUPS
+
+ Performance counter stats for './sw_hybrid 50000':
+
+          6,44,750      LLC-loads                                                             
+             5,080      LLC-load-misses                  #    0.79% of all LL-cache accesses  
+         87,09,525      cache-references                                                      
+            88,395      cache-misses                     #    1.01% of all cache refs         
+
+       0.365013817 seconds time elapsed
+
+       2.879128000 seconds user
+       0.004991000 seconds sys
+
+
+
+
+
+===============================================
+N = 100000    Threads = 1
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=100000
+Optimized Score: 45646
+Optimized Time:  1.4523s
+Throughput:      6.89 GCUPS
+
+ Performance counter stats for './sw_hybrid 100000':
+
+   25,94,44,06,983      cycles                                                                  (66.65%)
+   25,06,31,97,981      instructions                     #    0.97  insn per cycle              (83.33%)
+    1,51,64,53,510      branches                                                                (83.33%)
+         13,10,983      branch-misses                    #    0.09% of all branches             (83.35%)
+       3,79,05,241      cache-references                                                        (83.34%)
+          2,24,945      cache-misses                     #    0.59% of all cache refs           (83.33%)
+
+       1.458896149 seconds time elapsed
+
+      11.583395000 seconds user
+       0.008990000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=100000
+Optimized Score: 45646
+Optimized Time:  1.4375s
+Throughput:      6.96 GCUPS
+
+ Performance counter stats for './sw_hybrid 100000':
+
+    2,73,81,03,477      L1-dcache-loads                                                       
+       1,11,33,351      L1-dcache-load-misses            #    0.41% of all L1-dcache accesses 
+
+       1.443972856 seconds time elapsed
+
+      11.478121000 seconds user
+       0.006992000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=100000
+Optimized Score: 45646
+Optimized Time:  1.4709s
+Throughput:      6.80 GCUPS
+
+ Performance counter stats for './sw_hybrid 100000':
+
+         26,99,325      LLC-loads                                                             
+            14,261      LLC-load-misses                  #    0.53% of all LL-cache accesses  
+       3,48,66,223      cache-references                                                      
+          2,28,986      cache-misses                     #    0.66% of all cache refs         
+
+       1.477669144 seconds time elapsed
+
+      11.681245000 seconds user
+       0.008990000 seconds sys
+
+
+
+
+
+===============================================
+N = 100000    Threads = 2
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=100000
+Optimized Score: 45646
+Optimized Time:  1.4217s
+Throughput:      7.03 GCUPS
+
+ Performance counter stats for './sw_hybrid 100000':
+
+   25,85,72,29,770      cycles                                                                  (66.62%)
+   25,05,93,27,967      instructions                     #    0.97  insn per cycle              (83.33%)
+    1,51,47,63,705      branches                                                                (83.33%)
+         12,67,654      branch-misses                    #    0.08% of all branches             (83.34%)
+       3,81,01,609      cache-references                                                        (83.35%)
+          1,59,052      cache-misses                     #    0.42% of all cache refs           (83.37%)
+
+       1.428177270 seconds time elapsed
+
+      11.357410000 seconds user
+       0.006994000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=100000
+Optimized Score: 45646
+Optimized Time:  1.5606s
+Throughput:      6.41 GCUPS
+
+ Performance counter stats for './sw_hybrid 100000':
+
+    2,74,90,50,792      L1-dcache-loads                                                       
+       1,13,66,720      L1-dcache-load-misses            #    0.41% of all L1-dcache accesses 
+
+       1.567233350 seconds time elapsed
+
+      12.076257000 seconds user
+       0.018917000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=100000
+Optimized Score: 45646
+Optimized Time:  1.4747s
+Throughput:      6.78 GCUPS
+
+ Performance counter stats for './sw_hybrid 100000':
+
+         27,34,078      LLC-loads                                                             
+            31,288      LLC-load-misses                  #    1.14% of all LL-cache accesses  
+       3,50,06,510      cache-references                                                      
+          4,58,794      cache-misses                     #    1.31% of all cache refs         
+
+       1.481026329 seconds time elapsed
+
+      11.638295000 seconds user
+       0.010977000 seconds sys
+
+
+
+
+
+===============================================
+N = 100000    Threads = 4
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=100000
+Optimized Score: 45646
+Optimized Time:  1.4660s
+Throughput:      6.82 GCUPS
+
+ Performance counter stats for './sw_hybrid 100000':
+
+   26,12,33,67,815      cycles                                                                  (66.63%)
+   25,07,70,18,100      instructions                     #    0.96  insn per cycle              (83.33%)
+    1,51,89,99,091      branches                                                                (83.36%)
+         13,17,268      branch-misses                    #    0.09% of all branches             (83.36%)
+       3,88,08,139      cache-references                                                        (83.34%)
+          2,08,727      cache-misses                     #    0.54% of all cache refs           (83.31%)
+
+       1.472372809 seconds time elapsed
+
+      11.651327000 seconds user
+       0.019967000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=100000
+Optimized Score: 45646
+Optimized Time:  1.4400s
+Throughput:      6.94 GCUPS
+
+ Performance counter stats for './sw_hybrid 100000':
+
+    2,73,83,84,749      L1-dcache-loads                                                       
+       1,10,58,957      L1-dcache-load-misses            #    0.40% of all L1-dcache accesses 
+
+       1.446582302 seconds time elapsed
+
+      11.487699000 seconds user
+       0.009991000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=100000
+Optimized Score: 45646
+Optimized Time:  1.4486s
+Throughput:      6.90 GCUPS
+
+ Performance counter stats for './sw_hybrid 100000':
+
+         26,28,757      LLC-loads                                                             
+            12,681      LLC-load-misses                  #    0.48% of all LL-cache accesses  
+       3,40,90,933      cache-references                                                      
+          2,22,297      cache-misses                     #    0.65% of all cache refs         
+
+       1.455027076 seconds time elapsed
+
+      11.535292000 seconds user
+       0.007985000 seconds sys
+
+
+
+
+
+===============================================
+N = 100000    Threads = 8
+===============================================
+
+---- Perf Basic Stats ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=100000
+Optimized Score: 45646
+Optimized Time:  1.4212s
+Throughput:      7.04 GCUPS
+
+ Performance counter stats for './sw_hybrid 100000':
+
+   25,86,68,28,902      cycles                                                                  (66.63%)
+   25,04,67,43,197      instructions                     #    0.97  insn per cycle              (83.31%)
+    1,51,48,50,626      branches                                                                (83.32%)
+         13,04,580      branch-misses                    #    0.09% of all branches             (83.35%)
+       3,81,33,051      cache-references                                                        (83.37%)
+          1,37,114      cache-misses                     #    0.36% of all cache refs           (83.34%)
+
+       1.428279109 seconds time elapsed
+
+      11.359752000 seconds user
+       0.008997000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=100000
+Optimized Score: 45646
+Optimized Time:  1.4084s
+Throughput:      7.10 GCUPS
+
+ Performance counter stats for './sw_hybrid 100000':
+
+    2,73,68,79,654      L1-dcache-loads                                                       
+       1,10,13,609      L1-dcache-load-misses            #    0.40% of all L1-dcache accesses 
+
+       1.414767302 seconds time elapsed
+
+      11.256532000 seconds user
+       0.005998000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Strategy: 16-bit Unsigned (High Speed, Max Score 65535)
+N=100000
+Optimized Score: 45646
+Optimized Time:  1.4078s
+Throughput:      7.10 GCUPS
+
+ Performance counter stats for './sw_hybrid 100000':
+
+         26,62,263      LLC-loads                                                             
+             8,076      LLC-load-misses                  #    0.30% of all LL-cache accesses  
+       3,43,28,574      cache-references                                                      
+          1,32,618      cache-misses                     #    0.39% of all cache refs         
+
+       1.414404364 seconds time elapsed
+
+      11.252981000 seconds user
+       0.003997000 seconds sys
+
+
+
+
+

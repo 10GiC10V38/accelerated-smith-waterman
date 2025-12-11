@@ -1,0 +1,1162 @@
+===============================================
+ Building sw_baseline.c  →  sw_baseline
+===============================================
+
+
+========== Running PERf for smith-waterman ==========
+
+===============================================
+N = 1000    Threads = 1
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 1000
+Smith-Waterman score: 450
+Execution time: 0.019191 seconds
+
+ Performance counter stats for './sw_baseline 1000':
+
+       1,64,63,070      cycles                                                                  (62.23%)
+       2,88,27,816      instructions                     #    1.75  insn per cycle              (81.16%)
+         33,62,691      branches                                                                (81.10%)
+            51,568      branch-misses                    #    1.53% of all branches             (85.15%)
+          3,99,871      cache-references                                                        (85.84%)
+          1,39,295      cache-misses                     #   34.83% of all cache refs           (85.69%)
+
+       0.022094244 seconds time elapsed
+
+       0.013097000 seconds user
+       0.009067000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 1000
+Smith-Waterman score: 450
+Execution time: 0.018664 seconds
+
+ Performance counter stats for './sw_baseline 1000':
+
+         70,98,961      L1-dcache-loads                                                       
+          1,81,411      L1-dcache-load-misses            #    2.56% of all L1-dcache accesses 
+
+       0.021846784 seconds time elapsed
+
+       0.014677000 seconds user
+       0.007338000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 1000
+Smith-Waterman score: 450
+Execution time: 0.018850 seconds
+
+ Performance counter stats for './sw_baseline 1000':
+
+            12,658      LLC-loads                                                             
+             3,345      LLC-load-misses                  #   26.43% of all LL-cache accesses  
+          3,79,085      cache-references                                                      
+          1,58,101      cache-misses                     #   41.71% of all cache refs         
+
+       0.022302459 seconds time elapsed
+
+       0.012621000 seconds user
+       0.009708000 seconds sys
+
+
+
+
+
+===============================================
+N = 1000    Threads = 2
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 1000
+Smith-Waterman score: 450
+Execution time: 0.019170 seconds
+
+ Performance counter stats for './sw_baseline 1000':
+
+       1,65,45,597      cycles                                                                  (62.26%)
+       2,92,28,612      instructions                     #    1.77  insn per cycle              (81.15%)
+         34,19,330      branches                                                                (83.30%)
+            47,073      branch-misses                    #    1.38% of all branches             (85.82%)
+          3,63,092      cache-references                                                        (85.83%)
+          1,27,108      cache-misses                     #   35.01% of all cache refs           (82.79%)
+
+       0.022379769 seconds time elapsed
+
+       0.012293000 seconds user
+       0.010244000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 1000
+Smith-Waterman score: 450
+Execution time: 0.018715 seconds
+
+ Performance counter stats for './sw_baseline 1000':
+
+         71,08,809      L1-dcache-loads                                                       
+          1,75,598      L1-dcache-load-misses            #    2.47% of all L1-dcache accesses 
+
+       0.021908820 seconds time elapsed
+
+       0.014999000 seconds user
+       0.006999000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 1000
+Smith-Waterman score: 450
+Execution time: 0.018758 seconds
+
+ Performance counter stats for './sw_baseline 1000':
+
+            12,364      LLC-loads                                                             
+             3,101      LLC-load-misses                  #   25.08% of all LL-cache accesses  
+          3,47,546      cache-references                                                      
+          1,22,690      cache-misses                     #   35.30% of all cache refs         
+
+       0.021923128 seconds time elapsed
+
+       0.016062000 seconds user
+       0.006023000 seconds sys
+
+
+
+
+
+===============================================
+N = 1000    Threads = 4
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 1000
+Smith-Waterman score: 450
+Execution time: 0.019033 seconds
+
+ Performance counter stats for './sw_baseline 1000':
+
+       1,64,52,993      cycles                                                                  (62.05%)
+       2,94,92,619      instructions                     #    1.79  insn per cycle              (81.02%)
+         34,00,996      branches                                                                (84.39%)
+            45,659      branch-misses                    #    1.34% of all branches             (85.79%)
+          3,84,911      cache-references                                                        (85.77%)
+          1,34,846      cache-misses                     #   35.03% of all cache refs           (82.00%)
+
+       0.022305192 seconds time elapsed
+
+       0.011224000 seconds user
+       0.011224000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 1000
+Smith-Waterman score: 450
+Execution time: 0.018676 seconds
+
+ Performance counter stats for './sw_baseline 1000':
+
+         70,98,124      L1-dcache-loads                                                       
+          1,84,660      L1-dcache-load-misses            #    2.60% of all L1-dcache accesses 
+
+       0.021813830 seconds time elapsed
+
+       0.013604000 seconds user
+       0.008371000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 1000
+Smith-Waterman score: 450
+Execution time: 0.016495 seconds
+
+ Performance counter stats for './sw_baseline 1000':
+
+            11,334      LLC-loads                                                             
+             3,388      LLC-load-misses                  #   29.89% of all LL-cache accesses  
+          3,66,712      cache-references                                                      
+          1,64,258      cache-misses                     #   44.79% of all cache refs         
+
+       0.019251060 seconds time elapsed
+
+       0.010699000 seconds user
+       0.008754000 seconds sys
+
+
+
+
+
+===============================================
+N = 1000    Threads = 8
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 1000
+Smith-Waterman score: 450
+Execution time: 0.017306 seconds
+
+ Performance counter stats for './sw_baseline 1000':
+
+       1,67,60,742      cycles                                                                  (65.89%)
+       2,92,51,339      instructions                     #    1.75  insn per cycle              (84.33%)
+         33,18,209      branches                                                                (84.26%)
+            48,183      branch-misses                    #    1.45% of all branches             (84.30%)
+          3,81,408      cache-references                                                        (84.24%)
+          1,34,510      cache-misses                     #   35.27% of all cache refs           (81.31%)
+
+       0.020122475 seconds time elapsed
+
+       0.014505000 seconds user
+       0.005802000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 1000
+Smith-Waterman score: 450
+Execution time: 0.016672 seconds
+
+ Performance counter stats for './sw_baseline 1000':
+
+         71,02,650      L1-dcache-loads                                                       
+          1,76,910      L1-dcache-load-misses            #    2.49% of all L1-dcache accesses 
+
+       0.019434878 seconds time elapsed
+
+       0.011753000 seconds user
+       0.007835000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 1000
+Smith-Waterman score: 450
+Execution time: 0.016712 seconds
+
+ Performance counter stats for './sw_baseline 1000':
+
+            11,836      LLC-loads                                                             
+             2,882      LLC-load-misses                  #   24.35% of all LL-cache accesses  
+          3,63,445      cache-references                                                      
+          1,53,973      cache-misses                     #   42.36% of all cache refs         
+
+       0.019504901 seconds time elapsed
+
+       0.011368000 seconds user
+       0.008267000 seconds sys
+
+
+
+
+
+===============================================
+N = 5000    Threads = 1
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 5000
+Smith-Waterman score: 2215
+Execution time: 0.287155 seconds
+
+ Performance counter stats for './sw_baseline 5000':
+
+      50,42,10,491      cycles                                                                  (66.50%)
+      67,48,33,301      instructions                     #    1.34  insn per cycle              (83.27%)
+       7,59,68,313      branches                                                                (83.51%)
+         57,72,631      branch-misses                    #    7.60% of all branches             (83.46%)
+         70,10,433      cache-references                                                        (83.37%)
+         49,16,911      cache-misses                     #   70.14% of all cache refs           (83.17%)
+
+       0.290410039 seconds time elapsed
+
+       0.173331000 seconds user
+       0.117224000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 5000
+Smith-Waterman score: 2215
+Execution time: 0.243528 seconds
+
+ Performance counter stats for './sw_baseline 5000':
+
+      16,74,76,123      L1-dcache-loads                                                       
+         61,65,191      L1-dcache-load-misses            #    3.68% of all L1-dcache accesses 
+
+       0.244927303 seconds time elapsed
+
+       0.165991000 seconds user
+       0.078995000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 5000
+Smith-Waterman score: 2215
+Execution time: 0.255826 seconds
+
+ Performance counter stats for './sw_baseline 5000':
+
+          1,65,276      LLC-loads                                                             
+            75,938      LLC-load-misses                  #   45.95% of all LL-cache accesses  
+         70,11,347      cache-references                                                      
+         48,75,349      cache-misses                     #   69.54% of all cache refs         
+
+       0.257238605 seconds time elapsed
+
+       0.172490000 seconds user
+       0.084749000 seconds sys
+
+
+
+
+
+===============================================
+N = 5000    Threads = 2
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 5000
+Smith-Waterman score: 2215
+Execution time: 0.217555 seconds
+
+ Performance counter stats for './sw_baseline 5000':
+
+      50,46,53,234      cycles                                                                  (66.13%)
+      67,59,12,751      instructions                     #    1.34  insn per cycle              (83.06%)
+       7,63,40,101      branches                                                                (83.25%)
+         57,48,609      branch-misses                    #    7.53% of all branches             (83.62%)
+         73,67,760      cache-references                                                        (83.55%)
+         51,24,622      cache-misses                     #   69.55% of all cache refs           (83.45%)
+
+       0.219323718 seconds time elapsed
+
+       0.149989000 seconds user
+       0.068995000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 5000
+Smith-Waterman score: 2215
+Execution time: 0.213593 seconds
+
+ Performance counter stats for './sw_baseline 5000':
+
+      16,74,22,726      L1-dcache-loads                                                       
+         61,03,827      L1-dcache-load-misses            #    3.65% of all L1-dcache accesses 
+
+       0.214956520 seconds time elapsed
+
+       0.149000000 seconds user
+       0.066000000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 5000
+Smith-Waterman score: 2215
+Execution time: 0.215098 seconds
+
+ Performance counter stats for './sw_baseline 5000':
+
+          1,85,087      LLC-loads                                                             
+          1,04,558      LLC-load-misses                  #   56.49% of all LL-cache accesses  
+         72,19,813      cache-references                                                      
+         51,42,768      cache-misses                     #   71.23% of all cache refs         
+
+       0.216553244 seconds time elapsed
+
+       0.146296000 seconds user
+       0.070142000 seconds sys
+
+
+
+
+
+===============================================
+N = 5000    Threads = 4
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 5000
+Smith-Waterman score: 2215
+Execution time: 0.256911 seconds
+
+ Performance counter stats for './sw_baseline 5000':
+
+      50,43,20,537      cycles                                                                  (66.65%)
+      67,34,86,252      instructions                     #    1.34  insn per cycle              (83.32%)
+       7,57,46,721      branches                                                                (83.28%)
+         57,72,405      branch-misses                    #    7.62% of all branches             (83.38%)
+         70,08,960      cache-references                                                        (83.29%)
+         48,72,184      cache-misses                     #   69.51% of all cache refs           (83.40%)
+
+       0.258337947 seconds time elapsed
+
+       0.172584000 seconds user
+       0.085793000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 5000
+Smith-Waterman score: 2215
+Execution time: 0.239097 seconds
+
+ Performance counter stats for './sw_baseline 5000':
+
+      16,74,59,533      L1-dcache-loads                                                       
+         61,29,910      L1-dcache-load-misses            #    3.66% of all L1-dcache accesses 
+
+       0.240506326 seconds time elapsed
+
+       0.163649000 seconds user
+       0.076835000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 5000
+Smith-Waterman score: 2215
+Execution time: 0.238301 seconds
+
+ Performance counter stats for './sw_baseline 5000':
+
+          1,36,793      LLC-loads                                                             
+            57,264      LLC-load-misses                  #   41.86% of all LL-cache accesses  
+         67,88,032      cache-references                                                      
+         47,61,669      cache-misses                     #   70.15% of all cache refs         
+
+       0.239690024 seconds time elapsed
+
+       0.166795000 seconds user
+       0.072910000 seconds sys
+
+
+
+
+
+===============================================
+N = 5000    Threads = 8
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 5000
+Smith-Waterman score: 2215
+Execution time: 0.214199 seconds
+
+ Performance counter stats for './sw_baseline 5000':
+
+      50,39,34,697      cycles                                                                  (66.53%)
+      67,20,67,296      instructions                     #    1.33  insn per cycle              (83.27%)
+       7,56,98,123      branches                                                                (83.26%)
+         57,94,161      branch-misses                    #    7.65% of all branches             (83.27%)
+         70,28,739      cache-references                                                        (83.43%)
+         49,18,221      cache-misses                     #   69.97% of all cache refs           (83.51%)
+
+       0.215591489 seconds time elapsed
+
+       0.154725000 seconds user
+       0.060891000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 5000
+Smith-Waterman score: 2215
+Execution time: 0.210900 seconds
+
+ Performance counter stats for './sw_baseline 5000':
+
+      16,74,26,058      L1-dcache-loads                                                       
+         59,60,167      L1-dcache-load-misses            #    3.56% of all L1-dcache accesses 
+
+       0.212339697 seconds time elapsed
+
+       0.147503000 seconds user
+       0.064782000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 5000
+Smith-Waterman score: 2215
+Execution time: 0.238250 seconds
+
+ Performance counter stats for './sw_baseline 5000':
+
+          1,39,510      LLC-loads                                                             
+            56,137      LLC-load-misses                  #   40.24% of all LL-cache accesses  
+         68,18,031      cache-references                                                      
+         48,11,108      cache-misses                     #   70.56% of all cache refs         
+
+       0.239631866 seconds time elapsed
+
+       0.163773000 seconds user
+       0.075894000 seconds sys
+
+
+
+
+
+===============================================
+N = 10000    Threads = 1
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 10000
+Smith-Waterman score: 4504
+Execution time: 0.907993 seconds
+
+ Performance counter stats for './sw_baseline 10000':
+
+    2,07,99,56,568      cycles                                                                  (66.55%)
+    2,68,58,91,697      instructions                     #    1.29  insn per cycle              (83.29%)
+      30,15,10,538      branches                                                                (83.36%)
+       2,55,37,964      branch-misses                    #    8.47% of all branches             (83.35%)
+       3,04,20,942      cache-references                                                        (83.41%)
+       1,88,65,513      cache-misses                     #   62.01% of all cache refs           (83.33%)
+
+       0.909626203 seconds time elapsed
+
+       0.644766000 seconds user
+       0.264904000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 10000
+Smith-Waterman score: 4504
+Execution time: 0.867303 seconds
+
+ Performance counter stats for './sw_baseline 10000':
+
+      66,91,30,445      L1-dcache-loads                                                       
+       2,32,95,851      L1-dcache-load-misses            #    3.48% of all L1-dcache accesses 
+
+       0.869014428 seconds time elapsed
+
+       0.621976000 seconds user
+       0.246990000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 10000
+Smith-Waterman score: 4504
+Execution time: 0.896591 seconds
+
+ Performance counter stats for './sw_baseline 10000':
+
+          7,54,797      LLC-loads                                                             
+          3,35,510      LLC-load-misses                  #   44.45% of all LL-cache accesses  
+       2,93,76,577      cache-references                                                      
+       1,89,70,123      cache-misses                     #   64.58% of all cache refs         
+
+       0.898827016 seconds time elapsed
+
+       0.623481000 seconds user
+       0.274771000 seconds sys
+
+
+
+
+
+===============================================
+N = 10000    Threads = 2
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 10000
+Smith-Waterman score: 4504
+Execution time: 0.902908 seconds
+
+ Performance counter stats for './sw_baseline 10000':
+
+    2,06,61,04,987      cycles                                                                  (66.61%)
+    2,68,58,72,568      instructions                     #    1.30  insn per cycle              (83.29%)
+      30,14,99,180      branches                                                                (83.31%)
+       2,55,18,232      branch-misses                    #    8.46% of all branches             (83.30%)
+       2,89,89,487      cache-references                                                        (83.41%)
+       1,87,94,684      cache-misses                     #   64.83% of all cache refs           (83.36%)
+
+       0.904581722 seconds time elapsed
+
+       0.625414000 seconds user
+       0.279184000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 10000
+Smith-Waterman score: 4504
+Execution time: 0.896491 seconds
+
+ Performance counter stats for './sw_baseline 10000':
+
+      66,90,15,750      L1-dcache-loads                                                       
+       2,39,36,627      L1-dcache-load-misses            #    3.58% of all L1-dcache accesses 
+
+       0.898698911 seconds time elapsed
+
+       0.615811000 seconds user
+       0.282371000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 10000
+Smith-Waterman score: 4504
+Execution time: 0.863697 seconds
+
+ Performance counter stats for './sw_baseline 10000':
+
+          7,03,771      LLC-loads                                                             
+          3,05,552      LLC-load-misses                  #   43.42% of all LL-cache accesses  
+       2,84,89,953      cache-references                                                      
+       1,88,17,828      cache-misses                     #   66.05% of all cache refs         
+
+       0.865402043 seconds time elapsed
+
+       0.614531000 seconds user
+       0.250808000 seconds sys
+
+
+
+
+
+===============================================
+N = 10000    Threads = 4
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 10000
+Smith-Waterman score: 4504
+Execution time: 0.917606 seconds
+
+ Performance counter stats for './sw_baseline 10000':
+
+    2,07,41,96,174      cycles                                                                  (66.66%)
+    2,68,84,28,303      instructions                     #    1.30  insn per cycle              (83.35%)
+      30,18,77,385      branches                                                                (83.37%)
+       2,57,77,622      branch-misses                    #    8.54% of all branches             (83.34%)
+       2,94,98,671      cache-references                                                        (83.35%)
+       1,88,46,131      cache-misses                     #   63.89% of all cache refs           (83.28%)
+
+       0.919323698 seconds time elapsed
+
+       0.636506000 seconds user
+       0.282780000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 10000
+Smith-Waterman score: 4504
+Execution time: 0.889438 seconds
+
+ Performance counter stats for './sw_baseline 10000':
+
+      66,87,31,863      L1-dcache-loads                                                       
+       2,33,42,314      L1-dcache-load-misses            #    3.49% of all L1-dcache accesses 
+
+       0.891190720 seconds time elapsed
+
+       0.655086000 seconds user
+       0.236031000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 10000
+Smith-Waterman score: 4504
+Execution time: 0.893806 seconds
+
+ Performance counter stats for './sw_baseline 10000':
+
+          7,11,120      LLC-loads                                                             
+          2,82,978      LLC-load-misses                  #   39.79% of all LL-cache accesses  
+       2,86,33,668      cache-references                                                      
+       1,86,72,240      cache-misses                     #   65.21% of all cache refs         
+
+       0.895506510 seconds time elapsed
+
+       0.610644000 seconds user
+       0.284834000 seconds sys
+
+
+
+
+
+===============================================
+N = 10000    Threads = 8
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 10000
+Smith-Waterman score: 4504
+Execution time: 0.868613 seconds
+
+ Performance counter stats for './sw_baseline 10000':
+
+    2,06,17,41,580      cycles                                                                  (66.71%)
+    2,68,77,54,517      instructions                     #    1.30  insn per cycle              (83.33%)
+      30,18,86,343      branches                                                                (83.35%)
+       2,57,23,469      branch-misses                    #    8.52% of all branches             (83.32%)
+       2,86,59,837      cache-references                                                        (83.33%)
+       1,85,42,425      cache-misses                     #   64.70% of all cache refs           (83.28%)
+
+       0.870359808 seconds time elapsed
+
+       0.606523000 seconds user
+       0.263792000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 10000
+Smith-Waterman score: 4504
+Execution time: 0.857755 seconds
+
+ Performance counter stats for './sw_baseline 10000':
+
+      66,95,95,181      L1-dcache-loads                                                       
+       2,32,50,946      L1-dcache-load-misses            #    3.47% of all L1-dcache accesses 
+
+       0.859441026 seconds time elapsed
+
+       0.623564000 seconds user
+       0.235835000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 10000
+Smith-Waterman score: 4504
+Execution time: 0.889779 seconds
+
+ Performance counter stats for './sw_baseline 10000':
+
+          6,84,387      LLC-loads                                                             
+          2,95,069      LLC-load-misses                  #   43.11% of all LL-cache accesses  
+       2,77,65,188      cache-references                                                      
+       1,84,14,002      cache-misses                     #   66.32% of all cache refs         
+
+       0.891457687 seconds time elapsed
+
+       0.614611000 seconds user
+       0.276825000 seconds sys
+
+
+
+
+
+===============================================
+N = 50000    Threads = 1
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 50000
+Smith-Waterman score: 22708
+Execution time: 22.971570 seconds
+
+ Performance counter stats for './sw_baseline 50000':
+
+   54,17,65,89,596      cycles                                                                  (66.67%)
+   71,22,72,95,171      instructions                     #    1.31  insn per cycle              (83.34%)
+    8,23,00,32,658      branches                                                                (83.32%)
+      69,37,16,370      branch-misses                    #    8.43% of all branches             (83.34%)
+      84,08,84,896      cache-references                                                        (83.34%)
+      24,48,45,582      cache-misses                     #   29.12% of all cache refs           (83.33%)
+
+      23.103966429 seconds time elapsed
+
+      15.919939000 seconds user
+       7.055450000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 50000
+Smith-Waterman score: 22708
+Execution time: 22.239135 seconds
+
+ Performance counter stats for './sw_baseline 50000':
+
+   17,19,29,07,750      L1-dcache-loads                                                       
+      46,70,78,850      L1-dcache-load-misses            #    2.72% of all L1-dcache accesses 
+
+      22.291713937 seconds time elapsed
+
+      15.755277000 seconds user
+       6.491873000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 50000
+Smith-Waterman score: 22708
+Execution time: 22.089672 seconds
+
+ Performance counter stats for './sw_baseline 50000':
+
+       1,86,77,916      LLC-loads                                                             
+         32,22,784      LLC-load-misses                  #   17.25% of all LL-cache accesses  
+      79,27,68,093      cache-references                                                      
+      23,11,34,750      cache-misses                     #   29.16% of all cache refs         
+
+      22.126473580 seconds time elapsed
+
+      15.770542000 seconds user
+       6.326798000 seconds sys
+
+
+
+
+
+===============================================
+N = 50000    Threads = 2
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 50000
+Smith-Waterman score: 22708
+Execution time: 22.297515 seconds
+
+ Performance counter stats for './sw_baseline 50000':
+
+   52,59,14,47,376      cycles                                                                  (66.66%)
+   69,11,91,15,904      instructions                     #    1.31  insn per cycle              (83.33%)
+    7,85,08,89,184      branches                                                                (83.33%)
+      68,85,70,490      branch-misses                    #    8.77% of all branches             (83.34%)
+      81,82,20,892      cache-references                                                        (83.33%)
+      23,08,91,064      cache-misses                     #   28.22% of all cache refs           (83.34%)
+
+      22.340650564 seconds time elapsed
+
+      15.886510000 seconds user
+       6.419528000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 50000
+Smith-Waterman score: 22708
+Execution time: 21.902045 seconds
+
+ Performance counter stats for './sw_baseline 50000':
+
+   17,05,98,83,981      L1-dcache-loads                                                       
+      44,26,94,956      L1-dcache-load-misses            #    2.59% of all L1-dcache accesses 
+
+      21.947485759 seconds time elapsed
+
+      15.656292000 seconds user
+       6.254526000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 50000
+Smith-Waterman score: 22708
+Execution time: 21.941759 seconds
+
+ Performance counter stats for './sw_baseline 50000':
+
+       1,75,75,351      LLC-loads                                                             
+         31,22,860      LLC-load-misses                  #   17.77% of all LL-cache accesses  
+      77,03,70,956      cache-references                                                      
+      23,09,63,375      cache-misses                     #   29.98% of all cache refs         
+
+      21.989819994 seconds time elapsed
+
+      15.809020000 seconds user
+       6.140685000 seconds sys
+
+
+
+
+
+===============================================
+N = 50000    Threads = 4
+===============================================
+
+---- Perf Basic Stats ----
+Sequence length: 50000
+Smith-Waterman score: 22708
+Execution time: 22.022314 seconds
+
+ Performance counter stats for './sw_baseline 50000':
+
+   52,09,04,66,282      cycles                                                                  (66.66%)
+   68,51,55,99,354      instructions                     #    1.32  insn per cycle              (83.32%)
+    7,74,41,76,998      branches                                                                (83.35%)
+      68,67,07,794      branch-misses                    #    8.87% of all branches             (83.32%)
+      78,47,54,897      cache-references                                                        (83.35%)
+      23,06,82,398      cache-misses                     #   29.40% of all cache refs           (83.32%)
+
+      22.067004728 seconds time elapsed
+
+      15.719374000 seconds user
+       6.311521000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+Sequence length: 50000
+Smith-Waterman score: 22708
+Execution time: 21.915437 seconds
+
+ Performance counter stats for './sw_baseline 50000':
+
+   17,06,69,28,810      L1-dcache-loads                                                       
+      45,18,60,727      L1-dcache-load-misses            #    2.65% of all L1-dcache accesses 
+
+      21.958054048 seconds time elapsed
+
+      15.810842000 seconds user
+       6.113206000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+Sequence length: 50000
+Smith-Waterman score: 22708
+Execution time: 22.345057 seconds
+
+ Performance counter stats for './sw_baseline 50000':
+
+       1,74,27,969      LLC-loads                                                             
+         33,03,669      LLC-load-misses                  #   18.96% of all LL-cache accesses  
+      76,40,01,336      cache-references                                                      
+      23,83,48,407      cache-misses                     #   31.20% of all cache refs         
+
+      22.398260004 seconds time elapsed
+
+      16.068890000 seconds user
+       6.283789000 seconds sys
+
+
+
+
+
+===============================================
+N = 50000    Threads = 8
+===============================================
+
+---- Perf Basic Stats ----
+./sw_baseline: Killed
+
+ Performance counter stats for './sw_baseline 50000':
+
+   52,28,41,06,373      cycles                                                                  (66.66%)
+   68,24,50,77,854      instructions                     #    1.31  insn per cycle              (83.34%)
+    7,70,82,21,823      branches                                                                (83.34%)
+      68,54,31,027      branch-misses                    #    8.89% of all branches             (83.33%)
+      79,25,60,014      cache-references                                                        (83.33%)
+      24,63,56,311      cache-misses                     #   31.08% of all cache refs           (83.34%)
+
+      22.889854088 seconds time elapsed
+
+      16.420163000 seconds user
+       6.366023000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+./sw_baseline: Killed
+
+ Performance counter stats for './sw_baseline 50000':
+
+   16,85,88,91,913      L1-dcache-loads                                                       
+      46,17,66,792      L1-dcache-load-misses            #    2.74% of all L1-dcache accesses 
+
+      22.842535035 seconds time elapsed
+
+      16.431461000 seconds user
+       6.383071000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+./sw_baseline: Killed
+
+ Performance counter stats for './sw_baseline 50000':
+
+       1,82,78,224      LLC-loads                                                             
+         37,05,713      LLC-load-misses                  #   20.27% of all LL-cache accesses  
+      78,09,64,270      cache-references                                                      
+      23,69,80,163      cache-misses                     #   30.34% of all cache refs         
+
+      22.617103797 seconds time elapsed
+
+      16.516154000 seconds user
+       6.075482000 seconds sys
+
+
+
+
+
+===============================================
+N = 100000    Threads = 1
+===============================================
+
+---- Perf Basic Stats ----
+./sw_baseline: Killed
+
+ Performance counter stats for './sw_baseline 100000':
+
+   35,39,97,11,493      cycles                                                                  (66.66%)
+   41,04,06,53,508      instructions                     #    1.16  insn per cycle              (83.34%)
+    5,12,18,80,529      branches                                                                (83.33%)
+      33,57,54,579      branch-misses                    #    6.56% of all branches             (83.33%)
+      54,32,20,257      cache-references                                                        (83.34%)
+      22,86,36,303      cache-misses                     #   42.09% of all cache refs           (83.34%)
+
+      15.381803557 seconds time elapsed
+
+       9.022769000 seconds user
+       6.346134000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+./sw_baseline: Killed
+
+ Performance counter stats for './sw_baseline 100000':
+
+   10,24,30,01,378      L1-dcache-loads                                                       
+      33,92,94,156      L1-dcache-load-misses            #    3.31% of all L1-dcache accesses 
+
+      15.565130348 seconds time elapsed
+
+       8.860870000 seconds user
+       6.608412000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+./sw_baseline: Killed
+
+ Performance counter stats for './sw_baseline 100000':
+
+       1,39,93,584      LLC-loads                                                             
+         38,45,037      LLC-load-misses                  #   27.48% of all LL-cache accesses  
+      52,43,67,577      cache-references                                                      
+      23,36,73,946      cache-misses                     #   44.56% of all cache refs         
+
+      15.425380327 seconds time elapsed
+
+       8.959686000 seconds user
+       6.439618000 seconds sys
+
+
+
+
+
+===============================================
+N = 100000    Threads = 2
+===============================================
+
+---- Perf Basic Stats ----
+./sw_baseline: Killed
+
+ Performance counter stats for './sw_baseline 100000':
+
+   35,89,61,34,077      cycles                                                                  (66.65%)
+   41,14,44,33,591      instructions                     #    1.15  insn per cycle              (83.32%)
+    5,13,57,84,349      branches                                                                (83.35%)
+      33,85,03,914      branch-misses                    #    6.59% of all branches             (83.33%)
+      56,23,29,700      cache-references                                                        (83.34%)
+      24,50,51,744      cache-misses                     #   43.58% of all cache refs           (83.33%)
+
+      15.861686777 seconds time elapsed
+
+       9.265700000 seconds user
+       6.544257000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+./sw_baseline: Killed
+
+ Performance counter stats for './sw_baseline 100000':
+
+   10,09,71,77,584      L1-dcache-loads                                                       
+      33,85,03,465      L1-dcache-load-misses            #    3.35% of all L1-dcache accesses 
+
+      15.928030642 seconds time elapsed
+
+       9.113454000 seconds user
+       6.744415000 seconds sys
+
+
+
+---- Perf LLC / Memory ----
+./sw_baseline: Killed
+
+ Performance counter stats for './sw_baseline 100000':
+
+       1,53,31,820      LLC-loads                                                             
+         44,45,274      LLC-load-misses                  #   28.99% of all LL-cache accesses  
+      54,29,22,275      cache-references                                                      
+      25,38,31,074      cache-misses                     #   46.75% of all cache refs         
+
+      15.855214700 seconds time elapsed
+
+       9.093188000 seconds user
+       6.736694000 seconds sys
+
+
+
+
+
+===============================================
+N = 100000    Threads = 4
+===============================================
+
+---- Perf Basic Stats ----
+./sw_baseline: Killed
+
+ Performance counter stats for './sw_baseline 100000':
+
+   36,10,03,20,005      cycles                                                                  (66.67%)
+   41,71,58,10,165      instructions                     #    1.16  insn per cycle              (83.33%)
+    5,18,17,30,547      branches                                                                (83.33%)
+      34,49,06,431      branch-misses                    #    6.66% of all branches             (83.34%)
+      54,59,13,486      cache-references                                                        (83.33%)
+      23,57,15,500      cache-misses                     #   43.18% of all cache refs           (83.33%)
+
+      15.836540692 seconds time elapsed
+
+       9.223855000 seconds user
+       6.574046000 seconds sys
+
+
+
+---- Perf L1 Cache ----
+./sw_baseline: Killed
+
+ Performance counter stats for './sw_baseline 100000':
+
+    9,30,97,20,045      L1-dcache-loads                                                       
+      32,37,56,723      L1-dcache-load-misses            #    3.48% of all L1-dcache accesses 
+
+      15.269176274 seconds time elapsed
+
+       9.084426000 seconds user
+       5.937820000 seconds sys
+
+
+
+---- Perf LLC / Memory ----

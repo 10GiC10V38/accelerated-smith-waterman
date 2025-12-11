@@ -1,0 +1,14 @@
+# Ignore compiled binaries (we build these with Make)
+baseline/sw_baseline
+optimized/sw_opt
+
+# Ignore compiled object files
+*.o
+*.out
+
+# Ignore Python cache (if you ran the python scripts)
+__pycache__/
+*.pyc
+
+# Ignore system files
+.DS_Store
