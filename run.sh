@@ -2,45 +2,28 @@
 set -euo pipefail
 
 # ============================================================
-#  run.sh — Build + run + perf for sw_opt.c
-#
-#  Directory structure:
-#    code/run.sh
-#    code/optimized/sw_opt.c
-#    code/optimized/sw_opt         (binary after compile)
-#
-#  Usage:
-#    ./run.sh build
-#    ./run.sh run <N> <threads>
-#    ./run.sh perf <N> <threads>
-#
-#  Example:
-#    ./run.sh build
-#    ./run.sh run 2048 8
-#    ./run.sh perf 4096 8
+#  run.sh — Wrapper for Smith-Waterman Optimization
 # ============================================================
 
 # Paths
-SRC="optimized/sw_opt.c"
 BIN="optimized/sw_opt"
 
-# Compiler flags
-CFLAGS="-O3 -march=native -funroll-loops -mavx2 -fopenmp -Wall -Wextra"
-
 # ============================================================
-# BUILD
+# BUILD (Delegates to Makefile)
 # ============================================================
 build_sw_opt() {
     echo "====================================================="
-    echo " Compiling $SRC → $BIN"
+    echo " Building project via Makefile..."
     echo "====================================================="
-
-    gcc $CFLAGS "$SRC" -o "$BIN"
+    
+    # This ensures we use the exact same flags defined in Makefile
+    make optimized_bin
+    
     echo "Build complete."
 }
 
 # ============================================================
-# RUN (no perf)
+# RUN (Standard Execution)
 # ============================================================
 run_sw_opt() {
     if [ $# -lt 2 ]; then
@@ -66,11 +49,18 @@ run_sw_opt() {
 }
 
 # ============================================================
-# PERF MODE
+# PERF MODE (Linux Only)
 # ============================================================
 run_perf() {
     if [ $# -lt 2 ]; then
         echo "Usage: ./run.sh perf <N> <threads>"
+        exit 1
+    fi
+
+    # Check if user is on Linux before running perf
+    if [[ "$OSTYPE" != "linux-gnu"* ]]; then
+        echo "Error: 'perf' is a Linux-specific tool."
+        echo "On macOS, try using 'Instruments' or 'time' instead."
         exit 1
     fi
 
@@ -82,7 +72,7 @@ run_perf() {
     fi
 
     echo "====================================================="
-    echo " Running perf for optimized SW"
+    echo " Running perf (requires sudo)"
     echo "====================================================="
 
     sudo perf stat \
@@ -117,4 +107,3 @@ case "$MODE" in
         exit 1
         ;;
 esac
-

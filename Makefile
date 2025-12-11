@@ -1,10 +1,9 @@
 # 1. Compiler and Flags
 CC = gcc
-# Common flags: Optimize code (-O3) and show warnings (-Wall)
-CFLAGS = -O3 -Wall 
-# Optimization flags: Enable AVX2 SIMD and OpenMP threading
+# General flags: Optimize (-O3), architecture tuning (-march=native), and unrolling
+CFLAGS = -O3 -march=native -funroll-loops -Wall -Wextra
+# Parallelism flags
 OPT_FLAGS = -mavx2 -fopenmp
-
 # 2. Targets
 # 'all' is the default target when you just type 'make'
 all: baseline_bin optimized_bin
