@@ -2,108 +2,128 @@
 set -euo pipefail
 
 # ============================================================
-#  run.sh — Wrapper for Smith-Waterman Optimization
+#  run.sh — Smith-Waterman Benchmark Runner
 # ============================================================
 
 # Paths
-BIN="optimized/sw_opt"
+OPT_BIN="optimized/sw_opt"
+BASE_BIN="baseline/sw_baseline"
 
 # ============================================================
 # BUILD (Delegates to Makefile)
 # ============================================================
-build_sw_opt() {
+build_all() {
     echo "====================================================="
-    echo " Building project via Makefile..."
+    echo " Building all targets via Makefile..."
     echo "====================================================="
-    
-    # This ensures we use the exact same flags defined in Makefile
-    make optimized_bin
-    
+    make all
     echo "Build complete."
 }
 
 # ============================================================
-# RUN (Standard Execution)
+# RUN FUNCTION
 # ============================================================
-run_sw_opt() {
-    if [ $# -lt 2 ]; then
-        echo "Usage: ./run.sh run <N> <threads>"
-        exit 1
+run_program() {
+    TYPE=$1    # "opt" or "base"
+    N=$2       # Sequence Length
+    T=$3       # Threads (only used for opt)
+
+    if [ "$TYPE" == "opt" ]; then
+        BINARY="$OPT_BIN"
+        LABEL="Optimized (AVX2 + OpenMP)"
+        ARGS="$N $T"
+    else
+        BINARY="$BASE_BIN"
+        LABEL="Baseline (Scalar)"
+        # Baseline might not take thread arg, but we pass N. 
+        # Adjust if sw_baseline.c arguments differ!
+        ARGS="$N" 
     fi
 
-    N=$1
-    T=$2
-
-    # Auto-build if binary missing
-    if [ ! -x "$BIN" ]; then
-        build_sw_opt
+    # Auto-build if missing
+    if [ ! -x "$BINARY" ]; then
+        build_all
     fi
 
     echo "====================================================="
-    echo " Running optimized Smith–Waterman"
+    echo " Running $LABEL"
     echo "   N = $N"
-    echo "   Threads = $T"
+    if [ "$TYPE" == "opt" ]; then echo "   Threads = $T"; fi
     echo "====================================================="
 
-    "$BIN" "$N" "$T"
+    # Time the execution (simple user-friendly timing)
+    time "$BINARY" $ARGS
 }
 
 # ============================================================
-# PERF MODE (Linux Only)
+# PERF FUNCTION (Linux Only)
 # ============================================================
 run_perf() {
-    if [ $# -lt 2 ]; then
-        echo "Usage: ./run.sh perf <N> <threads>"
-        exit 1
-    fi
+    TYPE=$1
+    N=$2
+    T=$3
 
-    # Check if user is on Linux before running perf
     if [[ "$OSTYPE" != "linux-gnu"* ]]; then
-        echo "Error: 'perf' is a Linux-specific tool."
-        echo "On macOS, try using 'Instruments' or 'time' instead."
+        echo "Error: 'perf' is Linux-only."
         exit 1
     fi
 
-    N=$1
-    T=$2
-
-    if [ ! -x "$BIN" ]; then
-        build_sw_opt
+    if [ "$TYPE" == "opt" ]; then
+        BINARY="$OPT_BIN"
+        ARGS="$N $T"
+    else
+        BINARY="$BASE_BIN"
+        ARGS="$N"
     fi
 
-    echo "====================================================="
-    echo " Running perf (requires sudo)"
-    echo "====================================================="
+    if [ ! -x "$BINARY" ]; then build_all; fi
 
+    echo "====================================================="
+    echo " Running PERF on $TYPE (sudo required)"
+    echo "====================================================="
+    
     sudo perf stat \
-        -e task-clock,cycles,instructions,branches,branch-misses,page-faults,context-switches,cpu-migrations \
-        "$BIN" "$N" "$T"
+        -e task-clock,cycles,instructions,branches,branch-misses,L1-dcache-loads,L1-dcache-load-misses \
+        "$BINARY" $ARGS
 }
 
 # ============================================================
-# MODE SELECTOR
+# INPUT PARSING
 # ============================================================
 
-MODE=${1:-}
+MODE=${1:-help}
 
 case "$MODE" in
     build)
-        build_sw_opt
+        build_all
         ;;
     run)
-        shift
-        run_sw_opt "$@"
+        # Usage: ./run.sh run opt 2048 8
+        if [ $# -lt 3 ]; then
+            echo "Usage: ./run.sh run <opt|base> <N> [threads]"
+            exit 1
+        fi
+        TYPE=$2
+        N=$3
+        THREADS=${4:-1} # Default to 1 if not provided
+        run_program "$TYPE" "$N" "$THREADS"
         ;;
     perf)
-        shift
-        run_perf "$@"
+        if [ $# -lt 3 ]; then
+            echo "Usage: ./run.sh perf <opt|base> <N> [threads]"
+            exit 1
+        fi
+        TYPE=$2
+        N=$3
+        THREADS=${4:-1}
+        run_perf "$TYPE" "$N" "$THREADS"
         ;;
     *)
-        echo "Unknown mode: $MODE"
         echo "Usage:"
         echo "  ./run.sh build"
-        echo "  ./run.sh run <N> <threads>"
-        echo "  ./run.sh perf <N> <threads>"
+        echo "  ./run.sh run opt <N> <threads>   (Run Optimized)"
+        echo "  ./run.sh run base <N>            (Run Baseline)"
+        echo "  ./run.sh perf opt <N> <threads>  (Profile Optimized)"
         exit 1
         ;;
 esac
