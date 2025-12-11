@@ -34,6 +34,5 @@ Instead of row-by-row processing, we process **diagonals (waves)** of blocks. Bl
 .
 ├── baseline/           # Naive scalar implementation and analysis
 ├── optimized/          # AVX2/OpenMP optimized implementation
-├── scripts/            # Performance testing scripts
 ├── report.pdf          # Detailed architectural analysis
 └── run.sh              # Master execution script
